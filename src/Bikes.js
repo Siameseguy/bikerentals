@@ -31,13 +31,15 @@ export default class Bikes extends Component {
 
   render() {
     return (
-      <div className="bicycles">
+      <div className="bicycles col-xs-12">
         <h1 className="title">Make Your Reservation</h1>
-        {this
-          .state
-          .bicycles
-          .map(bike => <BikeCard key={bike.id} bikes={bike} func={this.addToTotal}/>)
+        <div className="row">
+          {this
+            .state
+            .bicycles
+            .map(bike => <BikeCard key={bike.id} bikes={bike} func={this.addToTotal}/>)
 }
+        </div>
         <Cart total={this.state.total}/>
       </div>
     )
