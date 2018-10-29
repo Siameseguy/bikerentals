@@ -36,10 +36,10 @@
 	width: 100vh;
 }
 
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
 	.cart {
-		display: block;
+		display: flex;
 		position: relative;
 		width: 100%;
 	}
-} */
+}
