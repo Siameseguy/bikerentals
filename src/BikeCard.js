@@ -8,7 +8,9 @@ function BikeCard(props) {
       <div className="card-body">
         <h5 className="card-title">{bicycle.name}</h5>
         <p className="card-text">${bicycle.price}</p>
-        <button className="btn btn-primary" onClick={() => props.func(bicycle.price)}>Reserve</button>
+        <button
+          className="btn btn-primary"
+          onClick={() => props.runFunctions(bicycle.price, bicycle.name)}>Add to Reservation</button>
       </div>
     </div>
   )

@@ -6,12 +6,12 @@
 	padding: 2rem 0;
 }
 
-.title {
+/* .title {
 	display: flex;
 	align-self: stretch;
 	width: 100%;
 	justify-content: center;
-}
+} */
 
 .card {
 	margin: 1rem;
@@ -24,6 +24,7 @@
 	right: 0;
 	background-color: #eee;
 	justify-content: stretch;
+	align-items: center;
 	height: 100vh;
 	width: 25%;
 	padding: 2rem;

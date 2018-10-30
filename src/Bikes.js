@@ -9,6 +9,7 @@ export default class Bikes extends Component {
     super()
     this.state = {
       bicycles: [],
+      reserved: [],
       total: 0
     }
 
@@ -18,6 +19,20 @@ export default class Bikes extends Component {
     this.setState({
       total: this.state.total + price
     })
+  }
+
+  addToReserved = (item) => {
+    this.setState({
+      total: this
+        .state
+        .reserved
+        .push(item)
+    })
+  }
+
+  runFunctions = (price, item) => {
+    this.addToReserved(item)
+    this.addToTotal(price)
   }
 
   async componentDidMount() {
@@ -37,10 +52,10 @@ export default class Bikes extends Component {
           {this
             .state
             .bicycles
-            .map(bike => <BikeCard key={bike.id} bikes={bike} func={this.addToTotal}/>)
+            .map(bike => <BikeCard key={bike.id} bikes={bike} runFunctions={this.runFunctions}/>)
 }
         </div>
-        <Cart total={this.state.total}/>
+        <Cart total={this.state.total} reserved={this.state.reserved}/>
       </div>
     )
   }
