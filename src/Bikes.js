@@ -46,7 +46,7 @@ export default class Bikes extends Component {
 
   render() {
     return (
-      <div className="bicycles col-xs-12">
+      <div className="bicycles">
         <h1 className="title">Make Your Reservation</h1>
         <div className="row">
           {this

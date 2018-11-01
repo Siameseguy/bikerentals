@@ -10,8 +10,13 @@ function Cart(props) {
             {props
               .reserved
               .map((item, index) => {
+                let count = 0;
                 return (
-                  <li className="list-unstyled" key={index}>{item}</li>
+
+                  <li className="list-unstyled" key={index}>{item === item
+                      ? item + count++
+                      : item
+}</li>
                 )
               })
 }
